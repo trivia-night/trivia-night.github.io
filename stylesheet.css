@@ -25,6 +25,7 @@
 .title {
     float: center;
     text-align: center;
-    color: purple;
+    color: orangered
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 49px;
 }
