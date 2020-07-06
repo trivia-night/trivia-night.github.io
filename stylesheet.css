@@ -21,3 +21,10 @@
     background-color: #4CAF50;
     color: white;
 }
+
+.title {
+    float: center;
+    text-align: center;
+    color: purple;
+    font-size: 49px;
+}
