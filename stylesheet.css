@@ -1,6 +1,7 @@
 .navbar {
     background-color: #333;
     overflow: hidden;
+    margin-bottom: 25px;
 }
   
 .navbar a {
@@ -25,16 +26,20 @@
 .title {
     float: center;
     text-align: center;
-    color: orangered;
+    color: #DD5422;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 64px;
-    padding-top: -10px;
-    padding-bottom: -10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     height: 36px;
     line-height: 36px;
 }
 
 iframe {
-    width: 100%;
-    height: 500;
+    display: block;
+    float: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 800px;
+    border: 4px #DD5422 solid;
 }
