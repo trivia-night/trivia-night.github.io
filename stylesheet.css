@@ -27,5 +27,14 @@
     text-align: center;
     color: orangered;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 49px;
+    font-size: 64px;
+    padding-top: -10px;
+    padding-bottom: -10px;
+    height: 36px;
+    line-height: 36px;
+}
+
+iframe {
+    width: 100%;
+    height: 500;
 }
