@@ -16,32 +16,49 @@
         <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
         <iframe src="https://docs.google.com/presentation/d/1-NVGHxbpoiIq2tO2cAGcnzI-9ijyVWyF4Tk2OTrqJms/edit?usp=sharing" frameborder="0" allowfullscreen allow-scripts>
         </iframe>
-        <form class="signin" id="answerForm">
+        <form class="signin" id="answerForm" onsubmit="return saveToFirebase();">
             <label for="inputName" class="inputLabel">Name</label>
-            <input type="text" id="inputName" class="inputForm" placeholder="Name" required autofocus>
+            <input type="text" id="inputName" class="inputForm" placeholder="" required>
             <label for="inputAnswers" class="inputLabel">Answers</label>
-            <input type="text" id="inputAnswers" class="inputForm" placeholder="Answers" required autofocus>
+            <input type="text" id="inputAnswers" class="inputForm" placeholder="" required>
             <button type="submit">Submit</button>
         </form>
-        <script>
-            function saveToFirebase() {
-                console.log("Saving to Firebase, hopefully...");
-                var nameObject = {
-                    name: getElementById(name),
-                    answers: getElementById(answers)
-                };
-                firebase.database().ref('answer-entries').push().set(nameObject);
-            }
-            document.getElementById("answerForm").onsubmit = function() {saveToFirebase()}
-        </script>
-        <!-- Submission Box -->
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
         <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="/__/firebase/7.15.5/firebase-analytics.js"></script>
-        <!-- Initialize Firebase -->
-        <script src="/__/firebase/init.js"></script>
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCRd83FqIhvG2LNKc0IKxRYpxGJccFmrBs",
+                authDomain: "trivia-night-8d0f7.firebaseapp.com",
+                databaseURL: "https://trivia-night-8d0f7.firebaseio.com",
+                projectId: "trivia-night-8d0f7",
+                storageBucket: "trivia-night-8d0f7.appspot.com",
+                messagingSenderId: "707876449830",
+                appId: "1:707876449830:web:f22796e494709beb34c0e7",
+                measurementId: "G-3LGEG2R9XV"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+
+        <script>
+            function saveToFirebase() {
+                var nameObject = {
+                    name: getElementById(inputName),
+                    answers: getElementById(inputAnswers)
+                };
+                console.log("Saving to Firebase, hopefully...");
+                firebase.database().ref('answer-entries').push().set(nameObject);
+                return false;
+            }
+        </script>
+        <!-- Submission Box -->
     </body>
 </html>
