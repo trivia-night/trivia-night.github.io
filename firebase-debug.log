@@ -1,0 +1,29 @@
+[debug] [2020-07-07T16:58:48.343Z] ----------------------------------------------------------------------
+[debug] [2020-07-07T16:58:48.347Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jwort\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-07-07T16:58:48.348Z] CLI Version:   8.4.3
+[debug] [2020-07-07T16:58:48.348Z] Platform:      win32
+[debug] [2020-07-07T16:58:48.348Z] Node Version:  v12.18.2
+[debug] [2020-07-07T16:58:48.352Z] Time:          Tue Jul 07 2020 12:58:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-07-07T16:58:48.352Z] ----------------------------------------------------------------------
+[debug] [2020-07-07T16:58:48.353Z] 
+[debug] [2020-07-07T16:58:48.376Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-07T16:58:48.378Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jwort\OneDrive\Desktop\TriviaWebsite\trivia-night.github.io
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
