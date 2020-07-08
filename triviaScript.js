@@ -16,14 +16,12 @@
     auth = firebase.auth();
     provider = new firebase.auth.GoogleAuthProvider();
 
-    console.log("WHOOOO");
-
     auth.getRedirectResult().then(function (result) {
         if (!auth.currentUser) {
             // User not logged in, start login.
             auth.signInWithRedirect(provider);
         } else {
-        
+            
         }
     }).catch(function (error) {
       console.log(error)
@@ -36,7 +34,7 @@ function submitAnswers() {
     firebase.database().ref('responses').push().set({
         name: form1.value,
         answers: form2.value,
-        email: userEmail
+        email: auth.currentUser.email
     });
     form1.value = '';
     form2.value = '';
@@ -48,7 +46,7 @@ function suggestCategory() {
     firebase.database().ref('suggestions').push().set({
         name: form1.value,
         suggestion: form2.value,
-        email: userEmail
+        email: auth.currentUser.email
     });
     form1.value = '';
     form2.value = '';
@@ -66,6 +64,6 @@ function voteCategory() {
     firebase.database().ref('votes').push().set({
         name: name,
         vote: vote,
-        email: userEmail
+        email: auth.currentUser.email
     });
 }
