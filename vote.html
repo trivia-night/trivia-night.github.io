@@ -2,6 +2,15 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+        <title>Trivia Night</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="triviaScript.js"></script>
     </head>
     <body>
         <h1 class="title">Trivia Night</h1>
@@ -29,53 +38,7 @@
                 <label for="vote" class="inputRadio">Game of Thrones</label>
                 <input type="radio" id="choice3" name="category" value="Game of Thrones" required>
             </div>
-
             <input type="submit" class="submitButton"/>
         </form>
-
-        <script>
-            function voteCategory() {
-                var name = document.getElementById("inputName").value;
-                console.log(name);
-                var choices = document.getElementsByName("category");
-                var vote;
-                for(i = 0; i < choices.length; i++) { 
-                    if(choices[i].checked) 
-                        console.log(choices[i].value);
-                        vote = choices[i].value;
-                        choices[i].checked = false;
-                }
-                firebase.database().ref('votes').push().set({
-                    name: name,
-                    vote: vote
-                });
-                console.log("There");
-            }
-        </script>
-
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyCRd83FqIhvG2LNKc0IKxRYpxGJccFmrBs",
-                authDomain: "trivia-night-8d0f7.firebaseapp.com",
-                databaseURL: "https://trivia-night-8d0f7.firebaseio.com",
-                projectId: "trivia-night-8d0f7",
-                storageBucket: "trivia-night-8d0f7.appspot.com",
-                messagingSenderId: "707876449830",
-                appId: "1:707876449830:web:f22796e494709beb34c0e7",
-                measurementId: "G-3LGEG2R9XV"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
     </body>
 </html>

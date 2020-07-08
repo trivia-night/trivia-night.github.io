@@ -19,6 +19,10 @@
     color: black;
 }
 
+.rightNav {
+    float: right;
+}
+
 .title {
     float: center;
     text-align: center;
@@ -34,6 +38,10 @@
     display: block;
     margin: 5px;
     margin-left: 10%;
+}
+
+.hide {
+    display:none;
 }
 
 iframe {
