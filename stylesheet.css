@@ -17,22 +17,22 @@
     background-color: #ddd;
     color: black;
 }
-  
-.navbar a.active {
-    background-color: #4CAF50;
-    color: white;
-}
 
 .title {
     float: center;
     text-align: center;
     color: #DD5422;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 64px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 36px;
     line-height: 36px;
+}
+
+.inputLabel, .inputForm, .submitButton {
+    display: block;
+    margin: 5px;
+    margin-left: 10%;
 }
 
 iframe {

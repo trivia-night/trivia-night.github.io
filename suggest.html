@@ -11,26 +11,24 @@
             <a href="suggest.html">Suggest</a>
             <a href="archive.html">Archive</a>
         </nav>
-        <!-- Little paragraph blurb -->
-        <!-- Snazzy link to Zoom -->
-        <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
-        <iframe src="https://docs.google.com/presentation/d/1-NVGHxbpoiIq2tO2cAGcnzI-9ijyVWyF4Tk2OTrqJms/edit?usp=sharing" frameborder="0" allowfullscreen allow-scripts>
-        </iframe>
-        <form class="submission" id="answerForm" onsubmit="submitAnswers();return false">
-            <label for="inputName" class="inputLabel">Team Name</label>
+        <div class="explanationText">
+            Is there a category you'd like to see in a future trivia night? Submit below and maybe we'll humor you.
+        </div>
+        <form class="submission" id="suggestionForm" onsubmit="suggestCategory();return false">
+            <label for="inputName" class="inputLabel">Name</label>
             <input type="text" id="inputName" class="inputForm" placeholder="" required>
-            <label for="inputAnswers" class="inputLabel">Answers</label>
-            <textarea id="inputAnswers" class="inputForm" cols="40" rows="8" required></textarea>
-            <input type="submit" class="submitButton">
+            <label for="inputSuggestion" class="inputLabel">Suggestion</label>
+            <input type="text" id="inputSuggestion" class="inputForm" placeholder="" required>
+            <input type="submit" class="submitButton"/>
         </form>
 
         <script>
-            function submitAnswers() {
+            function suggestCategory() {
                 var form1 = document.getElementById("inputName");
-                var form2 = document.getElementById("inputAnswers");
-                firebase.database().ref('responses').push().set({
+                var form2 = document.getElementById("inputSuggestion");
+                firebase.database().ref('suggestions').push().set({
                     name: form1.value,
-                    answers: form2.value
+                    suggestion: form2.value
                 });
                 form1.value = '';
                 form2.value = '';
