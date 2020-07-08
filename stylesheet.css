@@ -30,6 +30,34 @@
     line-height: 36px;
 }
 
+#footer {
+    background-color: #474747;
+}
+
+#footerText {
+    color: #f2f2f2;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 49px;
+}
+
+.explanationText {
+    margin-left: 10%;
+    color: black;
+    font-size: 25px;
+    width: 80%;
+}
+
+.explanationText a {
+    color: black;
+}
+
+#specialtyRound {
+    color: #EC4E20;
+}
+
 .submitBlock {
     display: block;
     margin: 25px;
