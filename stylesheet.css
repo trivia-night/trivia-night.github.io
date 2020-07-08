@@ -2,6 +2,7 @@
     background-color: #474747;
     overflow: hidden;
     margin-bottom: 25px;
+
 }
   
 .navbar a {
@@ -40,11 +41,15 @@ iframe {
     float: center;
     margin: 0 auto;
     width: 80%;
-    height: 800px;
+    height: 700px;
     border: 7px #EC4E20 solid;
     border-radius: 16px;
 }
 
 * {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
 }

@@ -7,14 +7,14 @@
         <h1 class="title">Trivia Night</h1>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="vote.html">Vote</a>
             <a href="suggest.html">Suggest</a>
+            <a href="vote.html">Vote</a>
             <a href="archive.html">Archive</a>
         </nav>
         <!-- Little paragraph blurb -->
         <!-- Snazzy link to Zoom -->
         <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
-        <iframe src="https://docs.google.com/presentation/d/1-NVGHxbpoiIq2tO2cAGcnzI-9ijyVWyF4Tk2OTrqJms/edit?usp=sharing" frameborder="0" allowfullscreen allow-scripts>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
         </iframe>
         <form class="submission" id="answerForm" onsubmit="submitAnswers();return false">
             <label for="inputName" class="inputLabel">Team Name</label>
@@ -60,6 +60,15 @@
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
+
+            var provider = new firebase.auth.GoogleAuthProvider();
+
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = result.credential.accessToken;
+                // The signed-in user info.
+                var user = result.user;
+            })
         </script>
     </body>
 </html>
