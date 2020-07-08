@@ -16,7 +16,7 @@
     auth = firebase.auth();
     provider = new firebase.auth.GoogleAuthProvider();
 
-    console.log("Here");
+    console.log("WHOOOO");
 
     auth.getRedirectResult().then(function (result) {
         if (!currentUser) {
