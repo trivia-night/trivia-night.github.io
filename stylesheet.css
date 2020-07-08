@@ -30,41 +30,39 @@
     line-height: 36px;
 }
 
-.submitButton,.radioGroup {
-    display: block;
-    margin: 5px;
-    margin-left: 10%;
-}
-
-#labelBlock, #inputBlock {
+.submitBlock {
     display: block;
     margin: 25px;
     font-size: 25px;
     margin-left: 10%;
 }
 
-#inputTeamName {
+#inputTeamName, #inputName {
     width: 80%;
     margin-bottom: 20%;
     margin-top: 0%;
     vertical-align: top;
 }
 
-.button {
+#inputSuggestion {
+    width: 25%;
+    margin-bottom: 20%;
+    margin-top: 0%;
+    vertical-align: top;
+}
+
+.submitButton:hover {
+    background-color: #BC3908;
+}
+
+.submitButton {
+    width: 80%;
+    height: 40px;
+    font-size: 25px;
     background-color: #EC4E20;
     color: white;
     border: none;
     border-radius: 9px;
-}
-
-.button:hover {
-    background-color: #BC3908;
-}
-
-#answerSubmitButton {
-    width: 80%;
-    height: 40px;
-    font-size: 25px;
 }
 
 .textInputLabel, #textInputForm {

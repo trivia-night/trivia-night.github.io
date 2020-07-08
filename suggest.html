@@ -23,12 +23,18 @@
         <div class="explanationText">
             Is there a category you'd like to see in a future trivia night? Submit below and maybe we'll humor you.
         </div>
-        <form class="submission" id="suggestionForm" onsubmit="suggestCategory();return false">
-            <label for="inputName" class="textInputLabel">Name</label>
-            <input type="text" id="inputName" class="textInputForm" placeholder="" required>
-            <label for="inputSuggestion" class="textInputLabel">Suggestion</label>
-            <input type="text" id="inputSuggestion" class="textInputForm" placeholder="" required>
-            <input type="submit" class="submitButton"/>
+        <form id="answerForm" onsubmit="suggestCategory();return false">
+            <div class="submitBlock">
+                <label for="inputName" class="textInputLabel">Name</label>
+                <label for="inputSuggestion" class="textInputLabel">Suggestion</label>
+            </div>
+            <div class="submitBlock">
+                <div id="textInputForm">
+                    <input type="text" id="inputName" placeholder="" class="textInput" required>
+                    <input type="submit" class="submitButton" value="Suggest">
+                </div>
+                <input type="text" id="inputSuggestion" placeholder="" class="textInput" required>
+            </div>
         </form>
     </body>
 </html>

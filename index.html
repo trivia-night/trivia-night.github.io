@@ -25,15 +25,15 @@
         <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
         <iframe id="iframeMain" src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
         </iframe>
-        <form class="submission" id="answerForm" onsubmit="submitAnswers();return false">
-            <div id="labelBlock">
-                <label for="inputName" class="textInputLabel">Team Name</label>
+        <form id="answerForm" onsubmit="submitAnswers();return false">
+            <div class="submitBlock">
+                <label for="inputTeamName" class="textInputLabel">Team Name</label>
                 <label for="inputAnswers" class="textInputLabel">Answers</label>
             </div>
-            <div id="inputBlock">
+            <div class="submitBlock">
                 <div id="textInputForm">
                     <input type="text" id="inputTeamName" placeholder="" class="textInput" required>
-                    <input type="submit" id="answerSubmitButton" class="button">
+                    <input type="submit" class="submitButton">
                 </div>
                 <textarea class="textInput" id="inputAnswers" cols="40" rows="8" required></textarea>
             </div>
