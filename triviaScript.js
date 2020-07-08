@@ -24,7 +24,7 @@
             // User not logged in, start login.
             auth.signInWithRedirect(provider);
         } else {
-          
+            user = result.user;
         }
     }).catch(function (error) {
       console.log(error)
