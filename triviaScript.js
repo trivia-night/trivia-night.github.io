@@ -17,15 +17,16 @@
     provider = new firebase.auth.GoogleAuthProvider();
 
     console.log("Here");
-    auth.signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        token = result.credential.accessToken;
+
+    auth.signInWithRedirect(provider);
+
+    auth.getRedirectResult().then(function(result) {
+        if (result.credential) {
+          token = result.credential.accessToken;
+        }
         user = result.user;
-        gmail = result.email;
-        console.log("HEERE");
     }).catch(function(error) {
         alert(error.message);
-        console.log("Error");
     });
 })();
 
