@@ -15,17 +15,19 @@
 
     auth = firebase.auth();
     provider = new firebase.auth.GoogleAuthProvider();
+    user = null;
 
     console.log("Here");
-    auth.signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        token = result.credential.accessToken;
-        user = result.user;
-        gmail = result.email;
-        console.log("HEERE");
-    }).catch(function(error) {
-        alert(error.message);
-        console.log("Error");
+
+    auth.getRedirectResult().then(function (result) {
+        if (!user) {
+            // User not logged in, start login.
+            auth.signInWithRedirect(provider);
+        } else {
+          
+        }
+    }).catch(function (error) {
+      console.log(error)
     });
 })();
 
@@ -34,7 +36,8 @@ function submitAnswers() {
     var form2 = document.getElementById("inputAnswers");
     firebase.database().ref('responses').push().set({
         name: form1.value,
-        answers: form2.value
+        answers: form2.value,
+        email: userEmail
     });
     form1.value = '';
     form2.value = '';
@@ -45,7 +48,8 @@ function suggestCategory() {
     var form2 = document.getElementById("inputSuggestion");
     firebase.database().ref('suggestions').push().set({
         name: form1.value,
-        suggestion: form2.value
+        suggestion: form2.value,
+        email: userEmail
     });
     form1.value = '';
     form2.value = '';
@@ -62,6 +66,7 @@ function voteCategory() {
     }
     firebase.database().ref('votes').push().set({
         name: name,
-        vote: vote
+        vote: vote,
+        email: userEmail
     });
 }
