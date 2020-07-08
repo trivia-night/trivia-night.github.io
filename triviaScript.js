@@ -19,7 +19,7 @@
     console.log("WHOOOO");
 
     auth.getRedirectResult().then(function (result) {
-        if (!currentUser) {
+        if (!auth.currentUser) {
             // User not logged in, start login.
             auth.signInWithRedirect(provider);
         } else {
