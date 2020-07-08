@@ -15,7 +15,6 @@
 
     auth = firebase.auth();
     provider = new firebase.auth.GoogleAuthProvider();
-    user = null;
 
     console.log("Here");
 
@@ -24,7 +23,7 @@
             // User not logged in, start login.
             auth.signInWithRedirect(provider);
         } else {
-            user = result.user;
+        
         }
     }).catch(function (error) {
       console.log(error)
