@@ -29,7 +29,7 @@
 })();
 
 function submitAnswers() {
-    var form1 = document.getElementById("inputName");
+    var form1 = document.getElementById("inputTeamName");
     var form2 = document.getElementById("inputAnswers");
     firebase.database().ref('responses').push().set({
         name: form1.value,
