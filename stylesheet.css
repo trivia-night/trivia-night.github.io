@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #333;
+    background-color: #474747;
     overflow: hidden;
     margin-bottom: 25px;
 }
@@ -14,14 +14,14 @@
 }
   
 .navbar a:hover {
-    background-color: #ddd;
+    background-color: #C5D9E2;
     color: black;
 }
 
 .title {
     float: center;
     text-align: center;
-    color: #DD5422;
+    color: #EC4E20;
     font-size: 64px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -29,7 +29,7 @@
     line-height: 36px;
 }
 
-.inputLabel, .inputForm, .submitButton {
+.inputLabel, .inputForm, .submitButton,.radioGroup {
     display: block;
     margin: 5px;
     margin-left: 10%;
@@ -41,7 +41,8 @@ iframe {
     margin: 0 auto;
     width: 80%;
     height: 800px;
-    border: 4px #DD5422 solid;
+    border: 7px #EC4E20 solid;
+    border-radius: 16px;
 }
 
 * {
