@@ -23,22 +23,29 @@
         <div class="explanationText">
             Vote for your preferred specialty round for next week (7/16)!
         </div>
-        <form class="submission" id="ballot" onsubmit="voteCategory();return false">
-            <label for="inputName" class="textInputLabel">Name</label>
-            <input type="text" id="inputName" class="textInputForm" placeholder="" required>
-            <div class="radioGroup">
-                <label for="vote" class="radioText">Marvel</label>
-                <input type="radio" class = "radioInput" id="choice1" name="category" value="Marvel" required>
-            </div>
-            <div class="radioGroup">
-                <label for="vote" class="radioText">Michael Schur Shows</label>
-                <input type="radio" class = "radioInput" id="choice2" name="category" value="Michael Schur" required>
-            </div>
-            <div class="radioGroup">
-                <label for="vote" class="radioText">Game of Thrones</label>
-                <input type="radio" class = "radioInput" id="choice3" name="category" value="Game of Thrones" required>
-            </div>
-            <input type="submit" class="submitButton"/>
-        </form>
+        <div id="ballot">
+            <form onsubmit="voteCategory();return false">
+                <div id="voterInfo"> 
+                    <label for="voterName">Name</label>
+                    <input type="text" id="voterName" class="textInput" placeholder="" required>
+                </div>
+                <hr>
+                <div class="radioGroup">
+                    <input type="radio" class = "radioInput" id="choice1" name="category" value="Michael Schur" required>
+                    <label for="vote" class="radioText">Michael Schur Shows</label>
+                </div>
+                <hr>
+                <div class="radioGroup">
+                    <input type="radio" class = "radioInput" id="choice2" name="category" value="Marvel" required>
+                    <label for="vote" class="radioText">Marvel</label>
+                </div>
+                <hr>
+                <div class="radioGroup">
+                    <input type="radio" class = "radioInput" id="choice3" name="category" value="Game of Thrones" required>
+                    <label for="vote" class="radioText">Game of Thrones</label>
+                </div>
+                <input type="submit" id="voteButton" value="Vote"/>
+            </form>
+        </div>
     </body>
 </html>

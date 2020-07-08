@@ -93,6 +93,49 @@
     border-radius: 16px;
 }
 
+#ballot {
+    margin: 0 auto;
+    margin-top: 64px;
+    font-size: 36px;
+    width: 30%;
+}
+
+#voterInfo input {
+    font-size: 25px;
+    width: 50%;
+}
+
+.radioGroup, #voterInfo {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.radioGroup input {
+    margin-left: 0;
+    margin-top: 16px;
+    vertical-align: middle;
+}
+
+.radioGroup label {
+    margin-right: 0;
+}
+
+#voteButton {
+    height: 40px;
+    font-size: 25px;
+    background-color: #EC4E20;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 49%;
+    margin-left: 25.5%;
+}
+
 * {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
