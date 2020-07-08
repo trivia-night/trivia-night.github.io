@@ -1,11 +1,11 @@
-.navbar {
+#navbar {
     background-color: #474747;
     overflow: hidden;
     margin-bottom: 25px;
 
 }
   
-.navbar a {
+#navbar a {
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -14,16 +14,12 @@
     font-size: 25px;
 }
   
-.navbar a:hover {
+#navbar a:hover {
     background-color: #C5D9E2;
     color: black;
 }
 
-.rightNav {
-    float: right;
-}
-
-.title {
+#title {
     float: center;
     text-align: center;
     color: #EC4E20;
@@ -34,17 +30,62 @@
     line-height: 36px;
 }
 
-.inputLabel, .inputForm, .submitButton,.radioGroup {
+.submitButton,.radioGroup {
     display: block;
     margin: 5px;
     margin-left: 10%;
 }
 
-.hide {
-    display:none;
+#labelBlock, #inputBlock {
+    display: block;
+    margin: 25px;
+    font-size: 25px;
+    margin-left: 10%;
 }
 
-iframe {
+#inputTeamName {
+    width: 80%;
+    margin-bottom: 20%;
+    margin-top: 0%;
+    vertical-align: top;
+}
+
+.button {
+    background-color: #EC4E20;
+    color: white;
+    border: none;
+    border-radius: 9px;
+}
+
+.button:hover {
+    background-color: #BC3908;
+}
+
+#answerSubmitButton {
+    width: 80%;
+    height: 40px;
+    font-size: 25px;
+}
+
+.textInputLabel, #textInputForm {
+    display: inline-block;
+    width: 16%;
+    text-align: left;
+}
+
+.textInput {
+    border: 1.5px solid #474747;
+    border-radius: 4px;
+}
+
+#inputAnswers {
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+}
+
+#iframeMain {
     display: block;
     float: center;
     margin: 0 auto;

@@ -13,8 +13,8 @@
         <script src="triviaScript.js"></script>
     </head>
     <body>
-        <h1 class="title">Trivia Night</h1>
-        <nav class="navbar">
+        <h1 id="title">Trivia Night</h1>
+        <nav id="navbar">
             <a href="index.html">Home</a>
             <a href="suggest.html">Suggest</a>
             <a href="vote.html">Vote</a>
@@ -24,19 +24,19 @@
             Vote for your preferred specialty round for next week (7/16)!
         </div>
         <form class="submission" id="ballot" onsubmit="voteCategory();return false">
-            <label for="inputName" class="inputLabel">Name</label>
-            <input type="text" id="inputName" class="inputForm" placeholder="" required>
+            <label for="inputName" class="textInputLabel">Name</label>
+            <input type="text" id="inputName" class="textInputForm" placeholder="" required>
             <div class="radioGroup">
-                <label for="vote" class="inputRadio">Marvel</label>
-                <input type="radio" id="choice1" name="category" value="Marvel" required>
+                <label for="vote" class="radioText">Marvel</label>
+                <input type="radio" class = "radioInput" id="choice1" name="category" value="Marvel" required>
             </div>
             <div class="radioGroup">
-                <label for="vote" class="inputRadio">Michael Schur Shows</label>
-                <input type="radio" id="choice2" name="category" value="Michael Schur" required>
+                <label for="vote" class="radioText">Michael Schur Shows</label>
+                <input type="radio" class = "radioInput" id="choice2" name="category" value="Michael Schur" required>
             </div>
             <div class="radioGroup">
-                <label for="vote" class="inputRadio">Game of Thrones</label>
-                <input type="radio" id="choice3" name="category" value="Game of Thrones" required>
+                <label for="vote" class="radioText">Game of Thrones</label>
+                <input type="radio" class = "radioInput" id="choice3" name="category" value="Game of Thrones" required>
             </div>
             <input type="submit" class="submitButton"/>
         </form>

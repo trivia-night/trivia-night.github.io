@@ -13,8 +13,8 @@
         <script src="triviaScript.js"></script>
     </head>
     <body>
-        <h1 class="title">Trivia Night</h1>
-        <nav class="navbar">
+        <h1 id="title">Trivia Night</h1>
+        <nav id="navbar">
             <a href="index.html">Home</a>
             <a href="suggest.html">Suggest</a>
             <a href="vote.html">Vote</a>
@@ -23,14 +23,20 @@
         <!-- Little paragraph blurb -->
         <!-- Snazzy link to Zoom -->
         <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
+        <iframe id="iframeMain" src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
         </iframe>
         <form class="submission" id="answerForm" onsubmit="submitAnswers();return false">
-            <label for="inputName" class="inputLabel">Team Name</label>
-            <input type="text" id="inputName" class="inputForm" placeholder="" required>
-            <label for="inputAnswers" class="inputLabel">Answers</label>
-            <textarea id="inputAnswers" class="inputForm" cols="40" rows="8" required></textarea>
-            <input type="submit" class="submitButton">
+            <div id="labelBlock">
+                <label for="inputName" class="textInputLabel">Team Name</label>
+                <label for="inputAnswers" class="textInputLabel">Answers</label>
+            </div>
+            <div id="inputBlock">
+                <div id="textInputForm">
+                    <input type="text" id="inputTeamName" placeholder="" class="textInput" required>
+                    <input type="submit" id="answerSubmitButton" class="button">
+                </div>
+                <textarea class="textInput" id="inputAnswers" cols="40" rows="8" required></textarea>
+            </div>
         </form>
     </body>
 </html>
