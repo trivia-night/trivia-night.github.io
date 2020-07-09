@@ -53,7 +53,7 @@ function suggestCategory() {
 }
 
 function voteCategory() {
-    var name = document.getElementById("inputName").value;
+    var name = document.getElementById("voterName").value;
     var choices = document.getElementsByName("category");
     var vote;
     for(i = 0; i < choices.length; i++) { 
