@@ -45,12 +45,13 @@ function suggestCategory() {
     var suggestion = document.getElementById("inputSuggestion").value;
     firebase.database().ref('suggestions/' + user.uid + '/info').set({
         name: user.displayName,
-        suggestion: suggestion,
         email: user.email
     });
+    console.log('Help');
     firebase.database().ref('suggestions/' + user.uid + '/list').push().set({
         suggestion: suggestion
     });
+    console.log('Here');
     suggestion.value = '';
 }
 
