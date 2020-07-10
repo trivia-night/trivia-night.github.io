@@ -6,8 +6,9 @@ function loadVotePage() {
     var ref = firebase.database().ref('votes/' + user.uid);
     ref.once("value")
         .then(function(snapshot) {
-            if(snapshot.exists());
-            reveal(document.getElementById("votedText"));
+            if(snapshot.exists()) {
+                reveal(document.getElementById("votedText"));
+            }
         });
 }
 
