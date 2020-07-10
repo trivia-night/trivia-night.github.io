@@ -72,6 +72,10 @@ function voteCategory() {
     reveal(document.getElementById("votedText"));
 }
 
+function loadVotePage() {
+    console.log(firebase.database().ref('votes/' + user.uid).exists());
+}
+
 function reveal(elem) {
     console.log("Here");
     elem.classList.remove("hide");
