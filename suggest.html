@@ -13,29 +13,29 @@
         <script src="triviaScript.js"></script>
     </head>
     <body>
-        <h1 id="title">Trivia Night</h1>
-        <nav id="navbar">
-            <a href="index.html">Home</a>
-            <a href="suggest.html">Suggest</a>
-            <a href="vote.html">Vote</a>
-            <!--<a href="archive.html">Archive</a>-->
-        </nav>
-        <div class="explanationText">
-            <p>Is there a category you'd like to see in a future trivia night? Submit below and maybe we'll humor you.</p>
-        </div>
-        <form onsubmit="suggestCategory();return false">
-            <div class="submitBlock">
-                <label for="inputSuggestion" class="textInputLabel">Suggestion</label>
+        <div class="content">
+            <h1 class="title">Trivia Night</h1>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="suggest.html">Suggest</a>
+                <a href="vote.html">Vote</a>
+                <!--<a href="archive.html">Archive</a>-->
+            </nav>
+            <div class="explanationText">
+                <p>Is there a category you'd like to see in a future trivia night? Submit below and maybe we'll humor you.</p>
             </div>
-            <div class="submitBlock">
-                <div id="textInputForm">
-                    <input type="submit" class="submitButton" value="Suggest">
+            <form onsubmit="suggestCategory();return false">
+                <div class="submitBlock">
+                    <label for="inputSuggestion" class="textInputLabel">Suggestion</label>
+                    <input type="text" id="inputSuggestion" placeholder="" class="textInput" required>
                 </div>
-                <input type="text" id="inputSuggestion" placeholder="" class="textInput" required>
-            </div>
-        </form>
-        <footer id="footer">
-            <div id="footerText">
+                <div>
+                    <input type="submit" class="suggestButton" value="Suggest">
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footerText">
                 <p>James Worthington & Kenny Behmer</p>
                 <p>trivia.tsars@gmail.com</p>
             </div>

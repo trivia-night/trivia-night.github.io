@@ -13,37 +13,39 @@
         <script src="triviaScript.js"></script>
     </head>
     <body>
-        <h1 id="title">Trivia Night</h1>
-        <nav id="navbar">
-            <a href="index.html">Home</a>
-            <a href="suggest.html">Suggest</a>
-            <a href="vote.html">Vote</a>
-            <!--<a href="archive.html">Archive</a>-->
-        </nav>
-        <div class="explanationText">
-            <p>Vote for your preferred specialty round for next week (7/16)!</p>
+        <div class="content">
+            <h1 class="title">Trivia Night</h1>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="suggest.html">Suggest</a>
+                <a href="vote.html">Vote</a>
+                <!--<a href="archive.html">Archive</a>-->
+            </nav>
+            <div class="explanationText">
+                <p>Vote for your preferred specialty round for next week (7/16)!</p>
+            </div>
+            <div id="ballot">
+                <form onsubmit="voteCategory();return false">
+                    <div class="radioGroup">
+                        <input type="radio" class = "radioInput" id="choice1" name="category" value="Michael Schur" required>
+                        <label for="vote" class="radioText">Michael Schur Shows</label>
+                    </div>
+                    <hr>
+                    <div class="radioGroup">
+                        <input type="radio" class = "radioInput" id="choice2" name="category" value="Marvel" required>
+                        <label for="vote" class="radioText">Marvel</label>
+                    </div>
+                    <hr>
+                    <div class="radioGroup">
+                        <input type="radio" class = "radioInput" id="choice3" name="category" value="Game of Thrones" required>
+                        <label for="vote" class="radioText">Game of Thrones</label>
+                    </div>
+                    <input type="submit" id="voteButton" value="Vote"/>
+                </form>
+            </div>
         </div>
-        <div id="ballot">
-            <form onsubmit="voteCategory();return false">
-                <div class="radioGroup">
-                    <input type="radio" class = "radioInput" id="choice1" name="category" value="Michael Schur" required>
-                    <label for="vote" class="radioText">Michael Schur Shows</label>
-                </div>
-                <hr>
-                <div class="radioGroup">
-                    <input type="radio" class = "radioInput" id="choice2" name="category" value="Marvel" required>
-                    <label for="vote" class="radioText">Marvel</label>
-                </div>
-                <hr>
-                <div class="radioGroup">
-                    <input type="radio" class = "radioInput" id="choice3" name="category" value="Game of Thrones" required>
-                    <label for="vote" class="radioText">Game of Thrones</label>
-                </div>
-                <input type="submit" id="voteButton" value="Vote"/>
-            </form>
-        </div>
-        <footer id="footer">
-            <div id="footerText">
+        <footer class="footer">
+            <div class="footerText">
                 <p>James Worthington & Kenny Behmer</p>
                 <p>trivia.tsars@gmail.com</p>
             </div>

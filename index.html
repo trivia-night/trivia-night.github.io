@@ -13,40 +13,42 @@
         <script src="triviaScript.js"></script>
     </head>
     <body>
-        <h1 id="title">Trivia Night</h1>
-        <nav id="navbar">
-            <a href="index.html">Home</a>
-            <a href="suggest.html">Suggest</a>
-            <a href="vote.html">Vote</a>
-            <!--<a href="archive.html">Archive</a>-->
-        </nav>
-        <div class="explanationText">
-            <p>Welcome to Trivia Night, hosted every Thursday at 8 PM EST! This week's 
-               specialty round is <span id="specialtyRound">YouTube</span>. You can join 
-               the Zoom call <a href="https://umich.zoom.us/j/91406273616" target="_blank">
-               here</a>, and view the trivia slides as they are updated below. Make sure 
-               someone on your team submits your answers using the form beneath the slides.
-            </p>
-        </div>
-        <!-- Snazzy link to Zoom -->
-        <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
-        <iframe id="iframeMain" src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
-        </iframe>
-        <form onsubmit="submitAnswers();return false">
-            <div class="submitBlock">
-                <label for="inputTeamName" class="textInputLabel">Team Name</label>
-                <label for="inputAnswers" class="textInputLabel">Answers</label>
+        <div class="content">
+            <h1 class="title">Trivia Night</h1>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="suggest.html">Suggest</a>
+                <a href="vote.html">Vote</a>
+                <!--<a href="archive.html">Archive</a>-->
+            </nav>
+            <div class="explanationText">
+                <p>Welcome to Trivia Night, hosted every Thursday at 8 PM EST! This week's 
+                specialty round is <span id="specialtyRound">YouTube</span>. You can join 
+                the Zoom call <a href="https://umich.zoom.us/j/91406273616" target="_blank">
+                here</a>, and view the trivia slides as they are updated below. Make sure 
+                someone on your team submits your answers using the form beneath the slides.
+                </p>
             </div>
-            <div class="submitBlock">
-                <div id="textInputForm">
-                    <input type="text" id="inputTeamName" placeholder="" class="textInput" required>
-                    <input type="submit" class="submitButton" value="Submit">
+            <!-- Snazzy link to Zoom -->
+            <!-- Scores? You'd have to update them... so maybe not, unless we embed again... -->
+            <iframe id="iframeMain" src="https://docs.google.com/presentation/d/e/2PACX-1vRWglI0hoasZLnJlr1OxB39Zmt0MxNHTF_W-jzvw3aHW_vd3yg6qeNfYBJakFjwMTGA-7Jf0kdcyj3A/embed?start=false&loop=false" allowfullscreen allow-scripts>
+            </iframe>
+            <form onsubmit="submitAnswers();return false">
+                <div class="submitBlock">
+                    <label for="inputTeamName" class="textInputLabel">Team Name</label>
+                    <label for="inputAnswers" class="textInputLabel">Answers</label>
                 </div>
-                <textarea class="textInput" id="inputAnswers" cols="40" rows="8" required></textarea>
-            </div>
-        </form>
-        <footer id="footer">
-            <div id="footerText">
+                <div class="submitBlock">
+                    <div id="textInputForm">
+                        <input type="text" id="inputTeamName" placeholder="" class="textInput" required>
+                        <input type="submit" class="submitButton" value="Submit">
+                    </div>
+                    <textarea class="textInput" id="inputAnswers" cols="40" rows="8" required></textarea>
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footerText">
                 <p>James Worthington & Kenny Behmer</p>
                 <p>trivia.tsars@gmail.com</p>
             </div>
