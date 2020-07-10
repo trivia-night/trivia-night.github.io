@@ -48,7 +48,7 @@ function suggestCategory() {
         suggestion: suggestion,
         email: user.email
     });
-    firebase.database().ref('suggestions/' + user.uid + '/list').push.set({
+    firebase.database().ref('suggestions/' + user.uid + '/list').push().set({
         suggestion: suggestion
     });
     suggestion.value = '';
