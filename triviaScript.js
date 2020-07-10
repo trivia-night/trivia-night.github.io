@@ -70,6 +70,7 @@ function voteCategory() {
     });
 
     reveal(document.getElementById("votedText"));
+    loadVotePage();
 }
 
 function loadVotePage() {
