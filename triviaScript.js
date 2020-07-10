@@ -68,4 +68,10 @@ function voteCategory() {
         vote: vote,
         email: auth.currentUser.email
     });
+
+    reveal(document.getElementById("votedText"));
+}
+
+function reveal(elem) {
+    elem.classList.remove("hide");
 }

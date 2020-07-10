@@ -46,11 +46,18 @@
     padding-bottom: 4px;
 }
 
-.explanationText {
+.explanationText, .votedText {
     margin-left: 10%;
-    color: black;
     font-size: 25px;
     width: 80%;
+}
+
+.explanationText {
+    color: black;
+}
+
+.votedText {
+    color: green;
 }
 
 .explanationText a {
@@ -173,6 +180,11 @@
     margin-right: 0;
     width: 49%;
     margin-left: 25.5%;
+}
+
+
+.hide {
+    display:none;
 }
 
 * {
