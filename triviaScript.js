@@ -62,8 +62,9 @@ function voteCategory() {
             choices[i].checked = false;
     }
     console.log(auth.currentUser.email);
-    firebase.database().ref('votes/' + auth.currentUser.email).set({
+    firebase.database().ref('votes/' + auth.currentUser.uid).set({
         name: name,
         vote: vote,
+        email: auth.currentUser.email
     });
 }
