@@ -68,7 +68,7 @@
     margin-left: 10%;
 }
 
-#inputTeamName, #inputName {
+#inputTeamName {
     width: 80%;
     margin-bottom: 20%;
     margin-top: 0%;
@@ -80,7 +80,7 @@
     margin-left: 0%;
 }
 
-.submitButton:hover {
+.submitButton:hover, .suggestButton:hover, .voteButton:hover {
     background-color: #BC3908;
 }
 
@@ -163,7 +163,7 @@
     font-size: 25px;
 }
 
-#voteButton {
+.voteButton {
     height: 40px;
     font-size: 25px;
     background-color: #EC4E20;
@@ -173,10 +173,6 @@
     margin-right: 0;
     width: 49%;
     margin-left: 25.5%;
-}
-
-#voteButton:hover {
-    background-color: #BC3908;
 }
 
 * {

@@ -43,10 +43,13 @@ function submitAnswers() {
 
 function suggestCategory() {
     var suggestion = document.getElementById("inputSuggestion").value;
-    firebase.database().ref('suggestions').push().set({
+    firebase.database().ref('suggestions/' + user.uid + '/info').set({
         name: user.displayName,
         suggestion: suggestion,
         email: user.email
+    });
+    firebase.database().ref('suggestions/' + user.uid + '/list').push.set({
+        suggestion: suggestion
     });
     suggestion.value = '';
 }
