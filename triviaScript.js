@@ -73,5 +73,7 @@ function voteCategory() {
 }
 
 function reveal(elem) {
+    console.log("Here");
     elem.classList.remove("hide");
+    console.log("There");
 }
