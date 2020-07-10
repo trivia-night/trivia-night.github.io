@@ -42,16 +42,14 @@ function submitAnswers() {
 }
 
 function suggestCategory() {
-    var suggestion = document.getElementById("inputSuggestion").value;
+    var suggestion = document.getElementById("inputSuggestion");
     firebase.database().ref('suggestions/' + user.uid + '/info').set({
         name: user.displayName,
         email: user.email
     });
-    console.log('Help');
     firebase.database().ref('suggestions/' + user.uid + '/list').push().set({
-        suggestion: suggestion
+        suggestion: suggestion.value
     });
-    console.log('Here');
     suggestion.value = '';
 }
 
