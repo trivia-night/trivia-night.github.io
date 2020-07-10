@@ -70,7 +70,6 @@ function voteCategory() {
     });
 
     reveal(document.getElementById("votedText"));
-    loadVotePage();
 }
 
 function loadVotePage() {
@@ -79,7 +78,13 @@ function loadVotePage() {
 }
 
 function reveal(elem) {
-    console.log("Here");
     elem.classList.remove("hide");
-    console.log("There");
 }
+
+auth.onAuthStateChanged(function(user) {
+    if (user) {
+        loadVotePage();
+    } else {
+      // No user is signed in.
+    }
+});
