@@ -54,37 +54,6 @@ function suggestCategory() {
     suggestion.value = '';
 }
 
-function voteCategory() {
-    var choices = document.getElementsByName("category");
-    var vote;
-    for(i = 0; i < choices.length; i++) { 
-        if(choices[i].checked) 
-            vote = choices[i].value;
-            choices[i].checked = false;
-    }
-    console.log(auth.currentUser.email);
-    firebase.database().ref('votes/' + user.uid).set({
-        name: user.displayName,
-        vote: vote,
-        email: auth.currentUser.email
-    });
-
-    reveal(document.getElementById("votedText"));
-}
-
-function loadVotePage() {
-    console.log(user);
-    console.log(firebase.database().ref('votes/' + user.uid).exists());
-}
-
 function reveal(elem) {
     elem.classList.remove("hide");
 }
-
-auth.onAuthStateChanged(function(user) {
-    if (user) {
-        loadVotePage();
-    } else {
-      // No user is signed in.
-    }
-});
