@@ -42,15 +42,13 @@ function submitAnswers() {
 }
 
 function suggestCategory() {
-    var form1 = document.getElementById("inputName");
-    var form2 = document.getElementById("inputSuggestion");
+    var suggestion = document.getElementById("inputSuggestion").value;
     firebase.database().ref('suggestions').push().set({
-        name: form1.value,
-        suggestion: form2.value,
-        email: auth.currentUser.email
+        name: user.displayName,
+        suggestion: suggestion,
+        email: user.email
     });
-    form1.value = '';
-    form2.value = '';
+    suggestion.value = '';
 }
 
 function voteCategory() {
