@@ -73,6 +73,7 @@ function voteCategory() {
 }
 
 function loadVotePage() {
+    console.log(user);
     console.log(firebase.database().ref('votes/' + user.uid).exists());
 }
 
